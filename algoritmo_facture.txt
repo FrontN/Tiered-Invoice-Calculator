@@ -1,0 +1,25 @@
+ALGORITMO: facture
+------------------------------
+
+VARIABILI E TIPI:
+  - nb_copy: int
+  - prezzo_finale: int
+  - prezzi_stampa: array
+
+COSTANTI:
+  - Funzione calcola_il_prezzo: prende tre parametri, numero_copie, prezzi_stampa e p_riferimento(in ordine crescente). 
+                                controlla se il numero di copie è superiore all'ultimo punto di riferimento, 
+                                deduce dalle copie il valore del punto di riferimento e la parte rimanente viene multiplicata 
+                                per il prezzo equivalente al punto di riferimento (considerando che prezzi_stampa e 
+                                p_riferimento devono avere la stessa lunghezza) per trovare il prezzo delle copie rientrando 
+                                in quel punto di riferimento poi aggiungerlo all'interno della variabile prezzo_finale poi 
+                                riprende le copie rimanenti e rifa la stessa operazione prendendo il punto di riferimento 
+                                successivo (ordine decrescente) ecc. una volta finito, trova la somma del prezzo_finale. proetto 
+                                di usare enumerate()
+
+INIZIO:
+  scrivi("Quante copie vuoi stampare?: ")
+  leggi(nb_copy)
+  scrivi(calcola_il_prezzo(nb_copy, prezzo_stampa, prezzo_finale))
+
+FINE
